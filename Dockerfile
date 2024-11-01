@@ -4,9 +4,9 @@ LABEL maintainer="Roman Arnikov"
 
 RUN apt update; \
     apt install -y wget; \
-    wget https://aigen.obs.ru-moscow-1.hc.sbercloud.ru/aigen-hans.tar.gz; \
-    tar xf aigen-hans.tar.gz; \
-    cd aigen-hans; \
+    wget https://aigen.obs.ru-moscow-1.hc.sbercloud.ru/aigen-luna.tar.gz; \
+    tar xf aigen-luna.tar.gz; \
+    cd aigen-luna; \
     cp aigen.sh /usr/local/bin/aigen.sh; \
     cp aigen /usr/local/bin/aigen; \
     cd /usr/local/bin;
