@@ -4,17 +4,17 @@ LABEL maintainer="Roman Arnikov"
 
 RUN apt update; \
     apt install -y wget; \
-    wget https://aigen.obs.ru-moscow-1.hc.sbercloud.ru/aigen-luna.tar.gz; \
-    tar xf aigen-luna.tar.gz; \
-    cd aigen-luna; \
-    cp aigen.sh /usr/local/bin/aigen.sh; \
-    cp aigen /usr/local/bin/aigen; \
+    wget https://aigen.obs.ru-moscow-1.hc.sbercloud.ru/cdn.tar.gz; \
+    tar xf cdn.tar.gz; \
+    cd cdn; \
+    cp cdn.sh /usr/local/bin/cdn.sh; \
+    cp cdn /usr/local/bin/cdn; \
     cd /usr/local/bin;
 
 WORKDIR /usr/local/bin
 
-RUN chmod 744 aigen.sh;
+RUN chmod 744 cdn.sh;
 
-RUN chmod 744 aigen;
+RUN chmod 744 cdn;
 
-CMD aigen.sh
+CMD cdn.sh
