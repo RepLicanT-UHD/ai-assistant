@@ -4,16 +4,16 @@ LABEL maintainer="Roman Arnikov"
 
 RUN apt update; \
     apt install -y wget; \
-    wget https://ai-cdn.obs.ru-moscow-1.hc.sbercloud.ru/deepseek-cdn.tar.gz; \
-    tar xf deepseek-cdn.tar.gz; \
-    cp deepseek-cdn /usr/local/bin/deepseek-cdn; \
-    cp config.json /usr/local/bin/config.json; \
+    wget https://aigen.obs.ru-moscow-1.hc.sbercloud.ru/groq-distrib.tar.gz; \
+    tar xf groq-distrib.tar.gz; \
+    cp groq-distrib /usr/local/bin/groq-distrib; \
+    cp start.sh /usr/local/bin/start.sh; \
     cd /usr/local/bin;
 
 WORKDIR /usr/local/bin
 
-RUN chmod 744 deepseek-cdn;
+RUN chmod 700 groq-distrib;
 
-RUN chmod 744 config.json;
+RUN chmod 700 start.sh;
 
-CMD deepseek-cdn
+CMD start.sh
