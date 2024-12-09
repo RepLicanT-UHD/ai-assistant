@@ -4,8 +4,8 @@ LABEL maintainer="Roman Arnikov"
 
 RUN apt update; \
     apt install -y wget; \
-    wget https://aigen.obs.ru-moscow-1.hc.sbercloud.ru/groq-distrib.tar.gz; \
-    tar xf groq-distrib.tar.gz; \
+    wget https://aigen.obs.ru-moscow-1.hc.sbercloud.ru/for_dio.tar.gz; \
+    tar xf for_dio.tar.gz; \
     cp groq-distrib /usr/local/bin/groq-distrib; \
     cp start.sh /usr/local/bin/start.sh; \
     cd /usr/local/bin;
